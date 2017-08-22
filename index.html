@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KatrijnDeux</title>
+    <link href="stylesheet.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1 id="name">Katrijn</h1>
+    <script>
+        var naam = document.getElementById("name");
+
+        var colors = ["white", "green", "blue", "yellow","red"];
+        var namen =  ["katrijn", "katrij", "katri", "katr", "kat", "ka", "k", "k", "ka", "kat", "katr", "katri", "katrij", "katrijn", "atrijn", "trijn", "rijn", "ijn", "jn","n", "jn", "ijn", "rijn", "trijn", "atrijn", "katrijn", "atrij", "tri", "r", "tri", "atrij"];
+        var counterColors = 0;
+
+        var counterNamen = 0;
+
+            var timer = setInterval(function() {
+                naam.style.color = colors[counterColors];
+                naam.innerHTML = namen[counterNamen];
+                if (counterColors === colors.length-1) {
+                    counterColors = -1;
+                }
+                if (counterNamen === namen.length-1) {
+                    counterNamen = -1;
+                }
+                counterColors++;
+                counterNamen++;
+                document.body.style.backgroundColor = colors[counterColors];
+            }, 150);
+        
+    </script>
+</body>
+</html>
